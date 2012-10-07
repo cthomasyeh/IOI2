@@ -12,12 +12,22 @@ using namespace std;
 void main()                               // define main program
 {
    
-	int studentAge[12] = { 10, 12, 13, 19, 8, 7, 10, 11,  14, 15, 16, 9};
-	int i, a;
+	int age[5];
+	int i=0 , a;
+	int value;
 	
-	// use cout operator to print the first, 6th and last element of the above array
+	cout << "Enter an integer value and Enter. Enter 0 to end: \n"; 	
+	
+	
+	cin >> age[0];
+		
+	while (age[i] != 0) {
+		i++;
+		cin >> age[i];
+	}
+		
 	
 	cout << "\nEnter any number to exit:";       // tell user how to get out. 
 	cin >> a;                              // wait for input before exit.
 
-}                
+}      
