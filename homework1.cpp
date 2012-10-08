@@ -17,9 +17,11 @@ void main()                               // define main program
 	cin >> first;
 	cout << "Enter second number: \n";
 	cin >> second;
-	
+	int third;
+
+	third = first;
 	first = second;
-	second = first;
+	second = third;
 
 	cout << "First number is: " << first << '\n';
 	cout << "Second number is: " << second << '\n';
