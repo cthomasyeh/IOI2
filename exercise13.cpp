@@ -7,8 +7,13 @@ using namespace std;
 
 int main () {
   ofstream myfile;
-  myfile.open ("output.txt");
-  myfile << "Writing this to a file.\n";
+  string line;
+  
+  cout << "Enter your text here:\n";
+  myfile.open (name);
+  getline(cin, line);
+  myfile << line;
+  //myfile << "Writing this to a file.\n";
   myfile.close();
   return 0;
 }

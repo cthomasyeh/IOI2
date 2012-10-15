@@ -4,10 +4,15 @@
 #include "stdafx.h"
 #include <iostream>
 #include <Windows.h>
+#include <string>
+
 using namespace std;
 
 int main ()
 {
+  //string Hello = "Hello Thomas!";
+  char hello = 65;
+  cout << hello  << '\n';
   int i;
   cout << "Please enter an integer value: ";
   cin >> i;

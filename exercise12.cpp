@@ -10,16 +10,21 @@ using namespace std;
 int main () { 
  	string mystr; 
 	int price=0; 
-	int quantity=0; 
+	short int quantity=0; 
+	
 	
 	cout << "Enter price: "; 
 	getline (cin,mystr); 
 	stringstream(mystr) >> price; 
 	
+	if (price == 0) break;
+
 	cout << "Enter quantity: "; 
 	getline (cin,mystr); 
 	stringstream(mystr) >> quantity; 
 	cout << "Total price: " << price*quantity << endl; 
+
+	
 
     int a;
 	cout << "Enter any number to exit:";       // tell user how to get out. 

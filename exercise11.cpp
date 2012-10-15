@@ -13,8 +13,12 @@ int main ()
   string mystr;
   string age;
   int x=0;
+  
+
+  
   cout << "What's your full name? ";
-  getline (cin, mystr);
+  
+  getline (cin, mystr);  
   cout << "How old are you? ";
   getline (cin, age);
   stringstream(age) >> x; 
@@ -24,6 +28,8 @@ int main ()
   cout << "What is your favorite team? ";
   getline (cin, mystr);
   cout << "I like " << mystr << " too!\n";
+  
+  
   int a;
   cout << "Enter any number to exit:";       // tell user how to get out. 
   cin >> a; 

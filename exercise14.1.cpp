@@ -5,10 +5,13 @@
 using namespace std;
 
 int main () {
-	string line;
-	ifstream myfile ("c:\\us-const.txt");
+	char line[10];
+	ifstream myfile ("us-const.txt");
 	if (myfile.is_open()) {
 		// your magic here	
+
+		cout << "The answer is: " << line[0] << '\n';
+		
     myfile.close();
 	}
 
