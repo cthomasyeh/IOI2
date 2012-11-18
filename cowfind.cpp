@@ -3,13 +3,14 @@ ID: tyeh
 LANG: C++
 PROB: cowfind
 */
-
+#include "stdafx.h"
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
 #include <string.h>
+#include <Windows.h>
 
 using namespace std;
 
