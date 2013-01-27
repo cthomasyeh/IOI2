@@ -14,6 +14,13 @@ public:
       if (top == maxelem) return;
       s[top++] = t;
    }
+
+   void push2(int t, int r) {
+	   // push two integers into the stack
+	   s[top++] = t;
+	   s[top++] = r;
+   }
+
    int pop()
    {
       if (top == 0) return -1;
@@ -37,33 +44,12 @@ void main()
    IntStack *s = new IntStack(100);
    int d;
 
+   s->push2(101, 300);
+  
    s->display();
-   s->push(1);
-   s->display();
-   s->push(2);
-   s->display();
-   s->push(3);
-   s->display();
-   s->push(4);
-   s->display();
-   s->pop();
-   s->display();
-   s->pop();
-   s->display();
-   s->push(10);
-   s->display();
-   s->pop();
-   s->display();
-   s->pop();
-   s->display();
-   s->pop();
-   s->display();
-   s->pop();
-   s->display();
-   s->pop();
+   s->empty();
    s->display();
 
-
-   Sleep(10000);
+   Sleep(100000);
 
 }
