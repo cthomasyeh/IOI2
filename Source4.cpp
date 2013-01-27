@@ -1,3 +1,15 @@
+#include "stdafx.h"
+#include <iostream>
+#include <Windows.h>
+
+using namespace std;
+
+/*
+
+Please follow me to type he code for class
+
+*/
+
 int main () {
 	int y=0;
 	
