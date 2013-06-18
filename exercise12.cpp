@@ -17,7 +17,7 @@ int main () {
 	getline (cin,mystr); 
 	stringstream(mystr) >> price; 
 	
-	if (price == 0) break;
+	//if (price == 0) break;
 
 	cout << "Enter quantity: "; 
 	getline (cin,mystr); 
