@@ -1,13 +1,11 @@
-// vector.cpp : Defines the entry point for the console application.
-//
-
+#include "stdafx.h"
 #include <iostream>
 #include <vector>
 using namespace std;
 
-void print( const vector<int>& );
+void print( vector<int>& );
 
-void print_backwards( const vector<int> &);
+void print_backwards( vector<int> &);
 
 int main() {
 	vector<int> v;
@@ -20,14 +18,14 @@ int main() {
 	print_backwards(v);
 }//main
 
-void print_backwards( const vector<int> &a) {
+void print_backwards( vector<int> &a) {
  		for(int i=a.size()-1; i>=0; --i)
  			cout << a[i] << " ";
  		cout << endl;
  		cout << "----------------"<<endl;
 }//print_backwards
 
-void print( const vector<int>& a) {
+void print( vector<int>& a) {
  		for(int i=0; i<a.size(); ++i)
  			cout << a[i] << " ";
  		cout << endl;

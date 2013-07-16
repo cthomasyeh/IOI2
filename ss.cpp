@@ -59,11 +59,24 @@ int main(void)
 
 void bubblesort(int a[], int size)
 {
-  
+	int i, j, temp;
+
+	for (i = (size - 1); i > 0; i--)
+	{  
+		for (j = 1; j <= i; j++)
+		{
+			if (a[j-1] > a[j])
+			{
+				temp = a[j-1];
+				a[j-1] = a[j];
+				a[j] = temp;
+			}
+		}
+	}
 }
 
 
 int binarysearch(int a[], int searchkey, int size)
 {
-    
+    return 0;
 }
