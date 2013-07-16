@@ -1,33 +1,82 @@
 #include "stdafx.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include <iostream>
-#include <vector>
+#include <Windows.h>
+
 using namespace std;
 
-void print( vector<int>& );
+int binarysearch(int[],int,int);
+void bubblesort(int[],int);
 
-void print_backwards( vector<int> &);
+int main(void)
+{
+    int arr_size; // user defined static array size
+    int rand_size = 1000000; // user defined randomize range
 
-int main() {
-	vector<int> v;
-	int number;
-	cout <<"Input some numbers and then end the input using a non-numerical key stroke\n";
-	while(cin>>number){
-		v.push_back(number);
-	}//while(more)
-	print(v);
-	print_backwards(v);
-}//main
+    cout << "Please Enter Array size : " << endl;
+    cin >> arr_size;
+    
+	int *a = new int[arr_size];
+    int i,searchkey,index;
 
-void print_backwards( vector<int> &a) {
- 		for(int i=a.size()-1; i>=0; --i)
- 			cout << a[i] << " ";
- 		cout << endl;
- 		cout << "----------------"<<endl;
-}//print_backwards
+    srand(time(NULL));
+    for(i=0; i<arr_size; i++)
+    {
+        a[i]=rand()%rand_size+1;
+        //a[i] = rand();
+        cout << "a[" << i << "] = " << a[i] << endl;
+        
+    }
 
-void print( vector<int>& a) {
- 		for(int i=0; i<a.size(); ++i)
- 			cout << a[i] << " ";
- 		cout << endl;
- 		cout << "----------------"<<endl;
-}//print
+    bubblesort(a,arr_size); // sort random emelents for binary search
+
+    cout << "Array is sorted (increase)\n";
+
+    for(i=0; i<arr_size; i++) // show sorted list
+    {
+        cout << "a[" << i << "] = " << a[i] << endl;
+    }
+
+    cout << "\nPlease enter a number for binary search between 1 and " << rand_size << endl;
+    cin >> searchkey;
+
+    index=binarysearch(a,searchkey,arr_size); // jump binarySearch function
+
+    if(index!=-1)
+    {
+        cout << "\nIndex number is : " << index << endl;
+    }
+    else
+    {
+        cout << "\nValue is not found" << endl;
+    }
+	Sleep(15000);
+    return 0;
+}
+
+
+void bubblesort(int a[], int size)
+{
+	int i, j, temp;
+
+	for (i = (size - 1); i > 0; i--)
+	{  
+		for (j = 1; j <= i; j++)
+		{
+			if (a[j-1] > a[j])
+			{
+				temp = a[j-1];
+				a[j-1] = a[j];
+				a[j] = temp;
+			}
+		}
+	}
+}
+
+
+int binarysearch(int a[], int searchkey, int size)
+{
+    return 0;
+}
