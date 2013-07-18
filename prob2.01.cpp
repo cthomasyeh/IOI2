@@ -3,76 +3,36 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
+int compute(long i) {
+	int counter = 1;
+	if ( i == 0 || i >= 1000000) return -1;
+	if (i == 1) return 0;
+	while (i != 1) { 
+
+	}
+
+	return counter;
+}
+
+
 int main () {
-	string line;
-	ifstream myfile("prob2.txt");
-	ofstream myout("output2.txt");
-	getline(myfile,line);
+	string line[1000];
+	ifstream myfile("prob1.txt");
+	ofstream myout("output1.txt");
+	getline(myfile,line[0]);
 	long n = 0;
-	stringstream ss(line);
-	int r,c;
-	ss >> r; ss >> c;
-	cout << r << " " << c << endl;
-	vector< vector<char> > vec(r, vector<char>(c));	
-
-
-	for (int i=0; i < r; i++) {
-		
+	while (line[n] != "") {
+		n++;
+		getline(myfile,line[n]);
 	}
+	for (int k=0; k<n; k++) {		
+		stringstream ss(line[k]);
+		int i,j, result, largest=0;
 
-	for (int i=0; i < r; i++) {		
-		for (int j=0; j< c; j++) {
-			if (vec[i][j] == '*') {}
-			else {
-				if ((i==0) && (j==0)) {
-					cout << "do something on 3 neighbors east to south" << endl;					
-				}
-				else if ((i==0) && (j==(c-1))) {
-					// do something on 3 neighbors west to south
-				}
-				else if ((i==(r-1)) && (j==0)) {
-					cout << "do something on 3 neighbors east to north" << endl;
-					
-				}  
-				else if ((i==(r-1)) && (j==(c-1))) {
-					// do something on 3 neighbors west to north
-				}
-				else if (i==0) {
-					// do something on 5  neighbors
-				}
-				else if (j==0) {
-					// do something on 5 neighbors
-				}
-				else if (i== (r-1)) {
-					// do something on 5 neighbors
-				}
-				else if (j== (c-1)) {
-					// do something on 5 neighbors
-				}
-				else {
-					// do something on all 8 neighbors
-				}	
-
-			}
-
-
-		}
-		//cout << endl;
 	}
-	cout << endl;
-
-	for (int i=0; i < r; i++ ) {
-		for (int j=0; j< c; j++) {
-			cout << vec[i][j];
-		}
-		cout << endl;
-	}
-	cout << endl;
-
 	myfile.close();
 	myout.close();
 	return 0;
