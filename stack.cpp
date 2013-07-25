@@ -15,12 +15,6 @@ public:
       s[top++] = t;
    }
 
-   void push2(int t, int r) {
-	   // push two integers into the stack
-	   s[top++] = t;
-	   s[top++] = r;
-   }
-
    int pop()
    {
       if (top == 0) return -1;
@@ -44,7 +38,7 @@ void main()
    IntStack *s = new IntStack(100);
    int d;
 
-   s->push2(101, 300);
+   s->push(101);
   
    s->display();
    s->empty();
