@@ -49,18 +49,7 @@ public:
 		len--;
 	}
 
-	int addPrev(Node * node, char value) { 
-		if (node == head) return 1;
-		if ( (node->data == 'w') || (node->data == value) ) return (1 + addPrev(node->prev, value));
-		else return 0; 
-		
-	}
 	
-	int addNext(Node * node, char value) {
-		if (node == tail) return 1;
-		if ( (node->data == 'w') || (node->data == value) ) return (1 + addNext(node->next, value));
-		else return 0;
-	}
    	
    	void cut() {
    		tail = head->prev;
@@ -90,7 +79,6 @@ private:
 int main()
 {
    	CharList *s = new CharList();
-   	Node * bnode, * enode; 
 	string line;
 	ifstream myfile("beads.in");
 	ofstream myout("beads.out");
@@ -101,22 +89,7 @@ int main()
 	getline(myfile, line);
 	for (int i=n-1; i>=0; i--) s->insert(line[i]);
    	s->display();
-   	int largest = 0;
-   	for (int i=0; i<s->len; i++) {
-   		int answer = 0;
-   		s->cut();
-   		bnode = s->head;
-   		enode = s->tail;
-   		while ((bnode->data == 'w') && (answer <= s->len)) {answer++; bnode = bnode->next;}
-   		while ((enode->data == 'w') && (answer <= s->len)) {answer++; enode = enode->prev;} 
-   		if (answer >= s->len) { largest = s->len; break;}
-   		answer = answer + s->addNext(bnode, bnode->data) + s->addPrev(enode, enode->data);
-   		if (answer > largest) largest = answer;
-   		cout << answer << endl;
-   		s->moveby1();
-   	}
-   	if (largest > s->len) largest = s->len;
-   	myout << largest << endl;
+   	
    	myfile.close();
    	myout.close();   	
 }
