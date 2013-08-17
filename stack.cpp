@@ -15,6 +15,13 @@ public:
       s[top++] = t;
    }
 
+   void push2(int t1, int t2)
+   {
+	   if (top == maxelem) return;
+	   s[top++] = t1;
+	   s[top++] = t2;
+   }
+
    int pop()
    {
       if (top == 0) return -1;
@@ -39,7 +46,7 @@ void main()
    int d;
 
    s->push(101);
-  
+   s->push2(20, 30);
    s->display();
    s->empty();
    s->display();
