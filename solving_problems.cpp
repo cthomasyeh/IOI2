@@ -49,9 +49,9 @@ int d5[1] = {1};
 //Given base and n that are both 1 or more, compute recursively (no loops) 
 //the value of base to the n power, so powerN(3, 2) is 9 (3 squared). 
 
-//powerN(3, 1) → 3
-//powerN(5, 5) → 3125
-//powerN(10, 3 ) → 1000
+//power(3, 1) should return 3
+//power(5, 5) should return 3125
+//power(10, 3 ) should return 1000
 int power(int base, int n)
 {
 	return 0;
@@ -84,9 +84,9 @@ int biggerArray(int a[], int alen, int b[], int blen)
 // begins at the given index. In this way, a recursive call can pass index+1 
 // to move down the array. The initial call will pass in index as 0. 
 
-// find6InArray({1, 6, 4}, 3, 0) → true
-// find6InArray({1, 4}, 2, 0) → false
-// find6InArray({6}, 1, 0) → true
+// find6InArray({1, 6, 4}, 3, 0) should return true
+// find6InArray({1, 4}, 2, 0) should return false
+// find6InArray({6}, 1, 0) should return true
 bool find6InArray(int a[], int len, int index)
 {
 	return false;
@@ -98,9 +98,9 @@ bool find6InArray(int a[], int len, int index)
 // the part of the array that begins at the given index. In this way, a recursive 
 // call can pass index+1 to move down the array. The initial call will pass in index as 0. 
 
-// find6IArray({1, 2, 6}, 3, 0) → 1
-// find6InArray({6, 6}, 2, 0) → 2
-// find6InArray({1, 2, 3, 4}, 4, 0) → 0
+// count6IArray({1, 2, 6}, 3, 0) should return 1
+// count6InArray({6, 6}, 2, 0) should return 2
+// count6InArray({1, 2, 3, 4}, 4, 0) should return 0
 int count6InArray(int a[], int len, int index)
 {
 	return 0;
@@ -159,7 +159,7 @@ int maxSpan(int a[], int len)
 }
 
 
-//Rearrange anarray so that every 3 is immediately followed by a 4. 
+//Re-arrange an array so that every 3 is immediately followed by a 4. 
 //Do not move the 3's, but every other number may move. The array 
 //contains the same number of 3's and 4's, every 3 has a number after 
 //it that is not a 3 or 4, and a 3 appears in the array before any 4. 
